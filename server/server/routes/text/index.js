@@ -7,9 +7,10 @@ module.exports = (params) => {
 
   router.post('/', (req, res) => {
     try {
-      return res.send({});
+      const text = textService.processText(req.body.text.trim());
+      return res.send({ text });
     } catch (err) {
-      return res.status(421).send({ error: err.message });
+      return res.status(400).send({ error: 'Empty request' });
     }
   });
 

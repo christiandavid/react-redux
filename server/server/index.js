@@ -18,10 +18,11 @@ module.exports = (config) => {
     });
   }
   app.use(helmet());
-  app.use(bodyParser.urlencoded({ extended: true }));
+  app.use(bodyParser.json());
 
   app.get('/favicon.ico', (req, res) => res.sendStatus(204));
   app.get('/robots.txt', (req, res) => res.sendStatus(204));
+  app.get('/', (req, res) => res.sendStatus(200));
 
   const textService = new TextService();
 
