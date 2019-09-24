@@ -17,10 +17,14 @@ const AddText = ({ dispatch }) => {
   return (
     <div>
       <form onSubmit={submit}>
-        <input ref={(node) => input = node} />
-        <button type="submit">
-          Add text
-        </button>
+        <div className="input-group">
+          <input ref={(node) => input = node} placeholder="Text" className="form-control" required />
+          <div className="input-group-append">
+            <button type="submit" className="btn btn-primary">
+              Add text
+            </button>
+          </div>
+        </div>
       </form>
     </div>
   );

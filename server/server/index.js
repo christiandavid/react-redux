@@ -19,7 +19,18 @@ module.exports = (config) => {
     });
   }
 
-  app.use(cors());
+  const whitelist = process.env.DOMAIN_WHITE_LIST.split(' ');
+  const corsOptions = {
+    origin: (origin, callback) => {
+      if (whitelist.indexOf(origin) !== -1) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+    optionsSuccessStatus: 200,
+  };
+  app.use(cors(corsOptions));
   app.use(helmet());
   app.use(bodyParser.json());
 

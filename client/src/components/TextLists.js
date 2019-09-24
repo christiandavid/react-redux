@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Text from './Text';
+import './TextLists.css';
 
 const TextList = ({ text }) => {
   const hasText = text.length > 0;
@@ -13,13 +14,17 @@ const TextList = ({ text }) => {
       />
     ))
   ) : (
-    <em>Please add a text</em>
+    <div className="card mb-4 shadow-sm">
+      <div className="card-body">
+        <h4 className="my-0 font-weight-normal">Please add a text</h4>
+      </div>
+    </div>
   );
 
   return (
-    <ul>
+    <div className="mb-3 text-center mt-4 card-columns">
       { list }
-    </ul>
+    </div>
   );
 };
 
