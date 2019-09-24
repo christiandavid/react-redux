@@ -2,7 +2,7 @@ import axios from 'axios';
 import Constants from '../constants';
 
 const addText = (text) => {
-  const request = axios.post(process.env.API_URL, {
+  const request = axios.post(process.env.REACT_APP_API_URL, {
     text,
   });
 
