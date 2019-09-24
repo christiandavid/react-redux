@@ -2,6 +2,7 @@ const express = require('express');
 const createError = require('http-errors');
 const bodyParser = require('body-parser');
 const helmet = require('helmet');
+const cors = require('cors');
 const routes = require('./routes');
 const TextService = require('./services/TextService');
 
@@ -17,6 +18,8 @@ module.exports = (config) => {
       return next();
     });
   }
+
+  app.use(cors());
   app.use(helmet());
   app.use(bodyParser.json());
 
