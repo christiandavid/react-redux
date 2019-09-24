@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import addText from '../actions';
 
-const AddText = ({ dispatch }) => {
+export const AddText = ({ dispatch }) => {
   let input;
 
   const submit = (e) => {
@@ -28,6 +29,10 @@ const AddText = ({ dispatch }) => {
       </form>
     </div>
   );
+};
+
+AddText.propTypes = {
+  dispatch: PropTypes.func.isRequired,
 };
 
 export default connect()(AddText);
