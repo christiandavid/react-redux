@@ -13,6 +13,7 @@
     "react/jsx-props-no-spreading": 0,
     "no-return-assign": 0,
     "import/imports-first": ["error", "absolute-first"],
-    "import/newline-after-import": "error"
+    "import/newline-after-import": "error",
+    "import/no-named-as-default": "off"
   }
 }

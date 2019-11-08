@@ -2,32 +2,36 @@
   "name": "text-processor",
   "version": "1.0.0",
   "description": "This is the Text Processor Service",
+  "author": "Christian David Ibarguen <christianibarguen@gmail.com>",
+  "license": "ISC",
   "main": "bin/run.js",
   "engines": {
     "node": ">=8"
   },
   "scripts": {
     "start": "nodemon bin/run.js | bunyan",
-    "test": "npx mocha --exit --recursive test/"
+    "test": "npx mocha --exit --recursive test/",
+    "lint": "eslint .",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\""
   },
-  "author": "Christian David Ibarguen <christianibarguen@gmail.com>",
-  "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
     "bunyan": "^1.8.12",
     "cors": "^2.8.5",
-    "dotenv": "^8.1.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "helmet": "^3.21.1",
+    "helmet": "^3.21.2",
     "http-errors": "^1.7.3",
-    "nodemon": "^1.19.2"
+    "nodemon": "^1.19.4",
+    "uuid": "^3.3.3"
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "eslint": "^6.4.0",
+    "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
-    "mocha": "^6.2.0",
+    "mocha": "^6.2.2",
+    "prettier": "^1.18.2",
     "supertest": "^4.0.2"
   }
 }

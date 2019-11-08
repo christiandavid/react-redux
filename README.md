@@ -1,6 +1,6 @@
-# Toolbox TV
+# React Redux Example
 
-Challenge code for ToolboxTV
+Example of using React and Redux with tests
 
 ### Prerequisites
 
@@ -12,7 +12,7 @@ For the execution of this project it is necessary to have Docker installed, and 
 
 ### Installing
 
-After having installed docker we proceed to issue the following command:
+After installing Docker, we will proceed to execute the following command:
 
 ```
 cd folder_project

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Footer = () => (
   <footer className="pt-4 my-md-5 pt-md-5 border-top">
